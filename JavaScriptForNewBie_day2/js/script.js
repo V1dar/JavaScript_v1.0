@@ -6,7 +6,10 @@ let chooseBtn = document.getElementById("choose"),
 		mailInput = document.querySelectorAll(".contactform_mail")[0],
 		modal = document.querySelector(".modal"),
 		buttonClose = document.querySelector(".close"),
-		text = document.getElementsByName("message")[0];
+		text = document.getElementsByName("message")[0],
+		buttonThanks = document.getElementById("button_thanks"),
+		thanks = document.querySelectorAll(".thanks")[0],
+		ButtonBack = document.querySelectorAll(".back")[0];
 
 function hover() {
 		heading.textContent = "Действительное всё!"
@@ -32,3 +35,13 @@ nameInput.addEventListener("input", function() {
 			text.value = ""
 		}
 });
+
+buttonThanks.addEventListener("click", function() {
+		modal.style.display = "none",
+		thanks.style.display = "block"
+});
+
+ButtonBack.addEventListener("click", function() {
+		thanks.style.display = "none",
+});
+
